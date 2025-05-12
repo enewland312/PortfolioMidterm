@@ -182,3 +182,84 @@ footer {
 .dark-mode footer {
     background-color: #1e1e1e !important;
 }
+
+#home #typed {
+    color: white;
+}
+
+/* typewriter effect on any inline block */
+.typing {
+    display: inline-block;       /* shrink to text width */
+    overflow: hidden;            /* hide the “untyped” part */
+    white-space: nowrap;         /* keep it on one line */
+    border-right: .15em solid;   /* flashing cursor */
+    animation:
+      typing 3s steps(30, end) forwards,
+      blink 0.75s step-end infinite;
+  }
+  
+  /* reveal from 0 → 100% of its own width */
+  @keyframes typing {
+    from { width: 0 }
+    to   { width: 100% }
+  }
+  
+  /* blink cursor on/off */
+  @keyframes blink {
+    from, to { border-color: transparent }
+     50%     { border-color: currentColor }
+  }
+
+/* Back to Top button */
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;               /* hidden by default */
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+#back-to-top.show {
+display: block;
+opacity: 0.75;
+}
+
+#back-to-top:hover {
+opacity: 1;
+}
+
+.reveal {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #0056b3;
+  }
+  

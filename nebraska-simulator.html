@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nebraska Medicine Training Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    #dark-mode-toggle {
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 150px 10% 50px;
+        gap: 50px;
+    }
+
+        
+    .text-content {
+        flex: 1;
+        max-width: 50%;
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .text-content h1 {
+      margin-top: 0;
+    }
+
+    .text-content ul {
+      padding-left: 20px;
+    }
+
+    .image-content {
+        flex: 0.9;
+        max-width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-content img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        object-fit: contain;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2575fc;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Back</a></li>
+      </ul>
+    </nav>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <div class="text-content">
+      <h1>Nebraska Medicine Training Simulator</h1>
+      <p>
+        This VR training simulator was developed for Nebraska Medicine to help healthcare professionals effectively handle infectious diseases in emergency settings. The project focused on the "Three I’s" framework: Identify, Isolate, and Inform.
+      </p>
+      <ul>
+        <li>Identify potential symptoms of infectious diseases</li>
+        <li>Implement proper isolation procedures</li>
+        <li>Communicate critical information to the appropriate medical team</li>
+      </ul>
+      <p>
+        The result was an engaging and educational tool that enhanced emergency response readiness through immersive virtual scenarios.
+      </p>
+    </div>
+
+    <div class="image-content">
+      <img src="nmed.jpg" alt="">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ethan Newland. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
